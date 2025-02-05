@@ -87,3 +87,34 @@ print(dict[2])
 print(tinydict)
 print(tinydict.keys())
 print(tinydict.values())
+
+print("---------------------- 算术运算符 ------------------------")
+
+a = 21
+b = 10
+c = 0
+
+c = a + b
+print('c的值为:', c)
+
+c = a - b
+print('c的值为:', c)
+
+c = a * b
+print('c的值为:', c)
+
+c = a % b
+print('c的值为:', c)
+
+a = 2
+b = 3
+c = a ** b
+
+print("c的值为:", c)
+
+a = 10
+b = 5
+
+c = a // b
+
+print('c的值为:', c)
