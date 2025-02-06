@@ -116,3 +116,45 @@ while var > 0:
         break
 print("Good bye")
 
+print("---------------------------------------------")
+
+for letter in 'Python':
+    if letter == 'h':
+        pass
+        print('执行pass块')
+    print('当前字母:', letter)
+
+var1 = 'Hello World!'
+var2 = 'Python Runoob'
+
+print("---------------------------------------------")
+print('var1[0]:', var1[0])
+print('var2[1:5]:', var2[1:5])
+
+var1 = 'Hello World!'
+print('输出:-', var1[:6] + 'Runoob')
+
+print("---------------------------------------------")
+a = "Hello"
+b = "Python"
+
+print('a+b结果为:', a + b)
+print('a*2结果为:', a * 2)
+print('a[1]结果为:', a[1])
+print('a[1:4]结果为:', a[1:4])
+
+if ("H" in a):
+    print("H 在 a 中")
+else:
+    print("H 不在 a 中")
+
+if ("M" not in a):
+    print("M 不在 a 中")
+else:
+    print("M 在 a 中")
+
+print('r\n')
+print('R\n')
+
+print("My name is %s, and weight is %d kg!" % ('张三', 21))
+
