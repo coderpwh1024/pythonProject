@@ -37,6 +37,41 @@ del tup
 
 print("After deleting tup:")
 # 报错异常
-print(tup)
+# print(tup)
 
->>> tinydict = {'a': 1, 'b': 2, 'b': '3'}
+print("---------------------字典------------------------")
+tinydict = {'a': 1, 'b': 2, 'b': '3'}
+print('tinydict[b]:', tinydict['b'])
+
+tinydict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}
+print("tinydict['Name']:", tinydict['Name'])
+print("tinydict[Age]:", tinydict['Age'])
+
+print("---------------------------------------------")
+tinydict = {'Name': 'Runoob', 'Age': 7, 'Class': 'First'}
+# key值不存在
+# print("tinydict['Alice']: ", tinydict['Alice'])
+
+tinydict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}
+tinydict['Age'] = 8
+tinydict['School'] = 'RUNOOB'
+
+print("tinydict['Age']: ", tinydict['Age'])
+print("tinydict['School']: ", tinydict['School'])
+
+print("----------------------删除元素-----------------------")
+tinydict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}
+del tinydict['Name']
+tinydict.clear()
+del tinydict
+
+# key 删除,tinydict 删除报错
+# print("tinydict['Age']:", tinydict['Age'])
+# print("tinydict['School']:", tinydict['School'])
+
+print("----------------------字典特性-----------------------")
+tinydict = {'Name': 'Runoob', 'Age': 7, 'Name': 'Manni'}
+print("tinydict['Name']:", tinydict['Name'])
+
+tinydict = {['Name']: 'Zara', 'Age': 7}
+print("tinydict['Name']:", tinydict['Name'])
