@@ -80,3 +80,39 @@ print("---------------------- while死循环-----------------------")
 #     print("You entered:", num)
 # print("Good bye!")
 
+print("----------------------for循环-----------------------")
+
+for letter in 'Python':
+    print('当前字母:', letter)
+
+fruits = ['banana', 'apple', 'mango']
+for fruit in fruits:
+    print('当前水果:', fruit)
+print('Good bye')
+
+print("---------------------------------------------")
+
+for num in range(10, 20):
+    for i in range(2, num):
+        if num % i == 0:
+            j = num / i
+            print('%d 等于 %d * %d' % (num, i, j))
+            break
+    else:
+        print('%d 是一个质数' % num)
+
+print("---------------------------------------------")
+for letter in 'Python':
+    if letter == 'h':
+        break
+    print('当前字母 :', letter)
+
+var = 10
+
+while var > 0:
+    print('当前变量 :', var)
+    var = var - 1
+    if var == 5:
+        break
+print("Good bye")
+
