@@ -41,3 +41,42 @@ var = 100
 if (var == 100):
     print('变量var的值为100')
     print('Good bye!')
+
+print("---------------------- while语句 ------------------------")
+a = 1
+while a <= 10:
+    print(a)
+    a += 2
+
+count = 0
+while (count < 9):
+    print("The count is:", count)
+    count += 1
+print("Good Bye!")
+
+print("---------------------- while偶数------------------------")
+
+i = 1
+while i <= 10:
+    i += 1
+    if i % 2 > 0:
+        continue
+    print(i)
+
+print("---------------------- while循环------------------------")
+
+i = 1
+while 1:
+    print(i)
+    i += 1
+    if i > 10:
+        break
+
+print("---------------------- while死循环-----------------------")
+
+# var = 1
+# while var == 1:
+#     num = raw_input("Enter a number:")
+#     print("You entered:", num)
+# print("Good bye!")
+
