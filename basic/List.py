@@ -75,3 +75,5 @@ print("tinydict['Name']:", tinydict['Name'])
 
 tinydict = {['Name']: 'Zara', 'Age': 7}
 print("tinydict['Name']:", tinydict['Name'])
+
+
