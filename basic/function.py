@@ -78,3 +78,30 @@ def printinfo(arg, *vartuple):
 printinfo(10)
 print("----------------------------------------------------")
 printinfo(60, 80, 90)
+
+sum = lambda arg1, arg2: arg1 + arg2
+print("相加后的值为:", sum(10, 20))
+print("相加后的值为:", sum(20, 20))
+
+
+def sum(arg1, arg2):
+    total = arg1 + arg2
+    print("函数内:", total)
+    return total
+
+
+total = sum(200, 34)
+print("-------------------------全局变量与局部变量---------------------------")
+
+totalResult = 0
+
+
+
+def sum(arg1, arg2):
+    totalResult = arg1 + arg2
+    print("函数内局部变量为:", totalResult)
+    return totalResult
+
+
+sum(10, 20)
+print("函数外全局变量为:", totalResult)
