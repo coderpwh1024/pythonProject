@@ -1,7 +1,7 @@
 import os
 from openai import AzureOpenAI
 
-endpoint = os.getenv("ENDPOINT_URL", "h")
+endpoint = os.getenv("ENDPOINT_URL", "")
 deployment = os.getenv("DEPLOYMENT_NAME", "")
 subscription_key = os.getenv("AZURE_OPENAI_API_KEY", "")
 
