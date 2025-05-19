@@ -1,18 +1,18 @@
 [
     {
-        "instruction": "太吵了，把声音开小一点",
-        "output": "1923286461092904961"
-    },
-    {
-        "instruction": "我不想听了，把歌关了吧",
-        "output": "1923286461092904962"
-    },
-    {
         "instruction": "我想听音乐",
-        "output": "1923286461092904960"
+        "output": "play_music()"
     },
     {
         "instruction": "我想去杭州玩，帮我查下天气预报",
-        "output": "1923286461092904963"
+        "output": "weather_search(杭州)"
+    },
+    {
+        "instruction": "我不想听了，把歌关了吧",
+        "output": "music_exit()"
+    },
+    {
+        "instruction": "太吵了，把声音开小一点",
+        "output": "volume_down()"
     }
 ]
