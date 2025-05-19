@@ -7,7 +7,7 @@ from tqdm import tqdm
 device = "cuda" # the device to load the model onto
 
 # 修改模型路径
-model_name = '/mnt/workspace/model/qwen14b-lora-3e4-256-train/'
+model_name = '/Users/coderpwh/quickstart/large_language-model_train_20250519_negm/model'
 print(model_name)
 model = AutoModelForCausalLM.from_pretrained(
     model_name,
@@ -21,7 +21,7 @@ ecount = 0
 
 
 # 修改训练数据路径
-test_data = json.load(open('/mnt/workspace/data/testdata.json'))
+test_data = json.load(open('/Users/coderpwh/python/workspace/pythonProject/testdata.json'))
 system_prompt = '你是一个意图识别专家，可以根据用户的问题识别出意图，并返回对应的函数调用和参数。'
 
 for i in tqdm(test_data[:]):
