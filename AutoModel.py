@@ -7,7 +7,7 @@ from tqdm import tqdm
 device = "cuda" # the device to load the model onto
 
 # 修改模型路径
-model_name = '/Users/coderpwh/quickstart/large_language-model_train_20250519_negm/model'
+model_name = '/Users/coderpwh/quickstart/large_language-model_train_20250519_negm/model/'
 print(model_name)
 model = AutoModelForCausalLM.from_pretrained(
     model_name,
