@@ -1,10 +1,12 @@
 # 意图识别
 #encoding=utf-8
+from torch.xpu import device
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import json
 from tqdm import tqdm
 
-device = "cuda" # the device to load the model onto
+# device = "cuda" # the device to load the model onto
+
 
 # 修改模型路径
 model_name = '/Users/coderpwh/quickstart/large_language-model_train_20250519_negm/model/'
