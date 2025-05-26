@@ -5,7 +5,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 import json
 from tqdm import tqdm
 
-# device = "cuda" # the device to load the model onto
+device = "cuda" # the device to load the model onto
 
 
 # 修改模型路径
