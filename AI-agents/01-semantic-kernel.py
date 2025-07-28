@@ -1,7 +1,7 @@
 import os
 from typing import Annotated
 import asyncio
-from openai import AsyncOpenAI, base_url
+from openai import AsyncOpenAI
 from dotenv import load_dotenv
 from semantic_kernel.agents import ChatCompletionAgent, ChatHistoryAgentThread
 from semantic_kernel.connectors.ai.open_ai import OpenAIChatCompletion
