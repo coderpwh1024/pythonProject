@@ -1,13 +1,19 @@
 import os
 from typing import Annotated
 import asyncio
-from openai import AsyncOpenAI
 from dotenv import load_dotenv
 from semantic_kernel.agents import ChatCompletionAgent, ChatHistoryAgentThread
 from semantic_kernel.connectors.ai.open_ai import OpenAIChatCompletion
 from semantic_kernel.functions import kernel_function
+from openai import AsyncAzureOpenAI
 
 import random
+
+apiKey = ""
+endpoint = ""
+open_ai_version = "2024-08-01-preview"
+azure_deployment = ""
+
 
 
 class DestinaltionsPlugin:
@@ -42,13 +48,18 @@ class DestinaltionsPlugin:
 
 
 load_dotenv()
-client = AsyncOpenAI(
-    api_key=os.getenv("OPENAI_API_KEY"),
-    base_url="https://models.inference.ai.azure.com/",
+
+
+client = AsyncAzureOpenAI(
+    api_key=apiKey,
+    azure_endpoint=endpoint,
+    api_version=open_ai_version,
 )
 
+
+
 chat_completion_service = OpenAIChatCompletion(
-    ai_model_id="gpt-4o-mini",
+    ai_model_id=azure_deployment,
     async_client=client,
 )
 
@@ -61,6 +72,9 @@ agent = ChatCompletionAgent(
 
 
 async def main():
+    # Create a new thread for the agent
+    # If no thread is provided, a new thread will be
+    # created and returned with the initial response
     thread: ChatHistoryAgentThread | None = None
 
     user_inputs = [
@@ -68,20 +82,21 @@ async def main():
     ]
 
     for user_input in user_inputs:
-        print(f"# User:{user_input}\n")
+        print(f"# User: {user_input}\n")
+        first_chunk = True
         async for response in agent.invoke_stream(
-                messages=user_input,
-                thread=thread
+            messages=user_input, thread=thread,
         ):
+            # 5. Print the response
             if first_chunk:
-                print(f"#{response.name}:", end="", flush=True)
+                print(f"# {response.name}: ", end="", flush=True)
                 first_chunk = False
             print(f"{response}", end="", flush=True)
             thread = response.thread
         print()
 
+    # Clean up the thread
     await thread.delete() if thread else None
-
 
 if __name__ == "__main__":
     asyncio.run(main())
