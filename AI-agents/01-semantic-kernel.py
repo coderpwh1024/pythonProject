@@ -1,4 +1,3 @@
-import os
 from typing import Annotated
 import asyncio
 from dotenv import load_dotenv
